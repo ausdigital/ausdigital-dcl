@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# copy this file to config.sh, then edit it
+# to reflect the domain of interest. This will
+# over-ride the default target (dcl.testpoint.io)
+#
+export DCL_READ_DOMAIN=dcl.testpoint.io
+export DCL_WRITE_DOMAIN=dcl.testpoint.io
+export DCL_TEST_USER=33767197359
+export DCL_TEST_SECRET=33767197359

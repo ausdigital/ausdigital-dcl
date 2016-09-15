@@ -1,0 +1,10 @@
+#
+# list of python packages required to run the test suite
+#
+envparse
+pytest
+pytest-spec
+pytest-json
+pytest-bdd
+
+xmltodict
