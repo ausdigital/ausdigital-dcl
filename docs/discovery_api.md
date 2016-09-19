@@ -59,7 +59,7 @@ Feature: HexDigest of URN encoded business identifier
     I need to calculate the MD5 hexdigest of a urn encoded business identifier
     So that I can form a valid DCL query
 
-Scenario Outline: hexdigest of urn encoded ABN 14247983785 (LOWER CASE hexdigest)
+Scenario Outline: hexdigest of urn encoded ABN 14247983785
     Given I know a business has the identifier 14247983785
     And I know the identifier type is ABN
     When I calculate the MD5 hexdigest of the NID format identifier
