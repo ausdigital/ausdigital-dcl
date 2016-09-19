@@ -45,6 +45,7 @@ Scenario Outline: urn encoded ABN 33767197359 (LOWER CASE urn)
 ```
 
 Unresolved issues:
+
  * The document explains how NID URNs can encode various business identifier echemes, but is not explicit about which schemes are required. Do we need to support non-ABN identifiers?
 
 
@@ -64,6 +65,7 @@ Scenario Outline: hexdigest of urn encoded ABN 14247983785 (LOWER CASE hexdigest
     When I calculate the MD5 hexdigest of the NID format identifier
     Then I get the value bd9aaa006d6a9ee5856da34d3b64cfa7
 ```
+
 
 ##  Combining the hashed URN into a DCL query string
 
