@@ -1,3 +1,0 @@
-# don't commit local configuration to repo
-config.sh
-.venv/
