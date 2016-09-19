@@ -67,7 +67,6 @@ Scenario: Log in and see the update form
 Scenario: Update SMP value
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    # When I go "/"
     Then I see "Update SMP"
     Then I click "Update SMP"
     Then I see "Here you can change your DCP to any domain name."
