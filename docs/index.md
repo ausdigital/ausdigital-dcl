@@ -6,8 +6,8 @@
  * Editor: Chris Gough christopher.d.gough@gmail.com
  * Contributors: Steven Capell steven.capell@gosource.com.au
 
-This document describes a method for discovering where (which Service Metadata Provider) an Australian Business is using to publish their business integration information, for business integration purposes (such as electronic invoicing).
-The framework assumes that there could be multiple SMP in the network and so the digital capability locator is essentially a DNS entry (NAPTR Record type) that is used to redirect a lookup query for a given business identifier to the correct SMP.
+This document describes a method for discovering where (which Service Metadata Provider, SMP) a Business publishes information about how to interface their business systems, for the purpose of digital protocols such as electronic invoicing.
+The framework assumes that there could be multiple SMP in the network, and so the Digital Capability Locator (DCL) is essentially a Domain Name System (DNS) entry that is used to redirect a lookup query for a given business identifier to the correct SMP.
 
 
 ## License
