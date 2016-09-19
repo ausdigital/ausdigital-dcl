@@ -22,6 +22,7 @@ Scenario Outline: Check MD5 calculation correctness
 ```
 
 Unresolved canonical input formatting issues:
+
  * String encoding is not specified, We have assumed utf-8 but this requires validation.
  * Input case sensitivity String is not specified. We have assumed lower case, but this requires validation.
 
