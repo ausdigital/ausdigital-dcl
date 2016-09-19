@@ -1,1 +1,7 @@
-site_name: ADBC Capability Locator
+site_name: Digital Capability Locator SPEC
+repo_url: https://github.com/ausdigital/capability-locator
+pages:
+    - 'Introduction': 'index.md'
+    - 'Discovery API': 'discovery_api.md'
+    - 'Management API': 'management_api.md'
+    - 'Normative examples': 'normative_examples.md'
