@@ -2,16 +2,16 @@
 
 The DCL Management API allows creation, deletion and update of business records in the DCL.
 
-There are potentially two user-stories for the DCL Management API
+There are potentially two user-stories for the DCL Management API:
 
-Self Service:
+Self Service
 ```
 As an Australian Business
 I need the ability to update my SMP specification in the DCL
 So that I have control over my own SMP provider 
 ```
 
-And Service Provider:
+Service Provider
 ```
 As a Service Provider
 I need the ability to update my customer's SMP specification in the DCL
@@ -23,12 +23,12 @@ The current AusDigital specification is in a raw status (not yet draft). Please 
 
 ## ADBC Proposal
 
-Section 8 of the ADBC Digital_Capability_Locator_Implementation_Guide_v1.0.pdf (available [here](https://github.org/ausdigital/adbc/) specifies the Management API "used to register a relationship between a Participant
+Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.org/ausdigital/adbc/)) specifies the Management API "used to register a relationship between a Participant
 Identifier and a Digital Capability Publisher".
 
-This specifies HTTPS interfaces with Client Certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.
+This specifies HTTPS interfaces with client certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.
 
-It also specifies a "List Accredited Publishers" and "List Accredited Access Points" interface. The document suggests the ADBC would be responsible for accreditation. More work is required to resolve this process, or even if these kinds of accreditation process are necessary or desirable.
+It also specifies a "List Accredited Publishers" and "List Accredited Access Points" interface. The document suggests the ADBC would be responsible for accreditation. More work is required to resolve this process, and evaluate if these kinds of accreditation process are necessary or even desirable.
 
 
 ## Simplified Web UI
