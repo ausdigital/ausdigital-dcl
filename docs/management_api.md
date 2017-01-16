@@ -18,12 +18,12 @@ I need the ability to update my customer's SMP specification in the DCL
 So that I can configure the DCL on their behalf
 ```
 
-The current AusDigital specification is in a raw status (not yet draft). Please contribute to the discussion at the [DCL issue system](https://github.com/ausdigital/capability-locator/issues/).
+The current AusDigital specification is in a raw status (not yet draft). Please contribute to the discussion at the [DCL issue system](https://github.com/ausdigital/ausdigital-dcl/issues/).
 
 
 ## ADBC Proposal
 
-Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.org/ausdigital/adbc/)) specifies the Management API "used to register a relationship between a Participant
+Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.org/ausdigital/dbc-specs/)) specifies the Management API "used to register a relationship between a Participant
 Identifier and a Digital Capability Publisher".
 
 This specifies HTTPS interfaces with client certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.

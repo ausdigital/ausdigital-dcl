@@ -1,6 +1,6 @@
 # Discovery API
 
-Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/adbc/)) specifies DNS NAPTR records as a DCL query API.
+Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/dbc-specs/)) specifies DNS NAPTR records as a DCL query API.
 
 This requires client to create an appropriately formed query, which is then sent through the DNS system where it is matched with a NAPTR record (maintained by the DCL service)
 
