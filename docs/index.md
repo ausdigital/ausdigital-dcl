@@ -46,4 +46,4 @@ The DCL-SPEC defines the interfaces and protocols a central address book, publis
  * [GitHub issues](https://github.com/ausdigital/ausdigital-dcl/issues/) for collaborating on the development of the DCL-SPEC
  * A reference [DCL service](https://dcl.testpoint.io/) (for testing and development purposes)
  * Free, Open-Source Software [DCL implementation](https://github.com/test-point/dcl.testpoint.io/).
- * An automated [DCL test suite](https://github.com/test-point/test-capability-locator/).
+ * An automated [DCL test suite](https://github.com/test-point/testpoint-dcl).
