@@ -7,14 +7,14 @@ There are potentially two user-stories for the DCL Management API:
 Self Service
 ```
 As an Australian Business
-I need the ability to update my SMP specification in the DCL
-So that I have control over my own SMP provider 
+I need the ability to update my DCP specification in the DCL
+So that I have control over my own DCP provider 
 ```
 
 Service Provider
 ```
 As a Service Provider
-I need the ability to update my customer's SMP specification in the DCL
+I need the ability to update my customer's DCP specification in the DCL
 So that I can configure the DCL on their behalf
 ```
 
@@ -39,69 +39,69 @@ A DCL Management API seems necessary for B2B integration (especially for the Led
 Given I am an Australian Business
 And I have credentials with a supported Identity Provider
 When I authenticate to the DCL Simplified Web UI
-Then I am able to update my SMP entry
+Then I am able to update my DCP entry
 ```
 
 The current DCL reference implementation:
  * Uses an OIDC Identity Provider as a simulation of a trusted business identity provider that is loosely decoupled from the DCL and enables concent-based authorisation.
- * Assumes Australian Businesses (or providers acting on their behalf) will be able to nominate arbitrary SMPs, rather than assuming a authorised or certified list of SMPs.
+ * Assumes Australian Businesses (or providers acting on their behalf) will be able to nominate arbitrary DCPs, rather than assuming a authorised or certified list of DCPs.
  * Assumes Australian Businesses will be able to directly control their own DCL records. It does not have a restrict access to a group of Accredited Access Points
 
 This simplified Web User Interface (Web UI) has been specified to support integration testing, and possibly as a "minimum viable product" for the self-service user-story.  It is not meant to imply that a DCL Management API in unessiscary, and the Simplified Web UI may be become redundant once a satisfactory Management API Specification has been agreed to.
 
 The following Simplified Web UI SPEC is proposed as an interim measure
 ```
-Feature: Simplified SMP update
+Feature: Simplified DCP update
     As an eInvoicing participant,
-    I need to update my SMP entry with the simplified DCL web interface
-    So that I can chose my SMP provider
+    I need to update my DCP entry with the simplified DCL web interface
+    So that I can chose my DCP provider
 
 Scenario: Log in and see the update form
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    Then I see "Update SMP"
-    Then I click "Update SMP"
+    Then I see "Update DCP"
+    Then I click "Update DCP"
     Then I see "Here you can change your DCP to any domain name."
-    And I see "New SMP Value"
+    And I see "New DCP Value"
 
-Scenario: Update SMP value
+Scenario: Update DCP value
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    Then I see "Update SMP"
-    Then I click "Update SMP"
+    Then I see "Update DCP"
+    Then I click "Update DCP"
     Then I see "Here you can change your DCP to any domain name."
-    And I see "New SMP Value"
-    Then I fill the 'new_smp_value' field by 'just.another.smp.testpoint.io' value
+    And I see "New DCP Value"
+    Then I fill the 'new_dcp_value' field by 'just.another.dcp.testpoint.io' value
     Then I submit the form
     And I see "Value update scheduled"
 
 Scenario: Check the update form
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    And click the "update my SMP" button
-    Then I see the SMP update form
+    And click the "update my DCP" button
+    Then I see the DCP update form
 
 Scenario: Check the save button
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    And click the "update my SMP" button
-    And I enter new value in the SMP update form
+    And click the "update my DCP" button
+    And I enter new value in the DCP update form
     Then I see "save" button
 
 Scenario: Check the confirm button
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    And click the "update my SMP" button
-    And I enter new value in the SMP update form
+    And click the "update my DCP" button
+    And I enter new value in the DCP update form
     And then I click the "save" button
     Then I see the "confirm" button
 
-Scenario: Save changes to the SMP
+Scenario: Save changes to the DCP
     Given I have ABN credentials at the DCL web interface
     When I authenticate
-    And click the "update my SMP" button
-    And I enter new value in the SMP update form
+    And click the "update my DCP" button
+    And I enter new value in the DCP update form
     And then I click the "save" button
     And I click the "confirm" button
-    Then I see "SMP updated" message
+    Then I see "DCP updated" message
 ```
