@@ -3,7 +3,7 @@
   "info" : {
     "version" : "1.0",
     "title" : "Digital Capability Locator (DCL) interface specification",
-    "description" : "The \"Digital Capability Lookup\" (DCL) specification defines a DNS based method to discover which SMP is the authoritative source for a given business"
+    "description" : "The \"Digital Capability Lookup\" (DCL) specification defines a DNS based method to discover which DCP(SMP) is the authoritative source for a given business"
   },
   "paths" : { }
 }
