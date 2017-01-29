@@ -23,7 +23,7 @@ The current AusDigital specification is in a raw status (not yet draft). Please 
 
 ## ADBC Proposal
 
-Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.org/ausdigital/dbc-specs/)) specifies the Management API "used to register a relationship between a Participant
+Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies the Management API "used to register a relationship between a Participant
 Identifier and a Digital Capability Publisher".
 
 This specifies HTTPS interfaces with client certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.
