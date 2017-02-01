@@ -43,11 +43,11 @@ Then I am able to update my DCP entry
 ```
 
 The current DCL reference implementation:
- * Uses an OIDC Identity Provider as a simulation of a trusted business identity provider that is loosely decoupled from the DCL and enables concent-based authorisation.
+ * Uses an OIDC Identity Provider as a simulation of a trusted business identity provider that is loosely decoupled from the DCL and enables consent-based authorisation.
  * Assumes Australian Businesses (or providers acting on their behalf) will be able to nominate arbitrary DCPs, rather than assuming a authorised or certified list of DCPs.
  * Assumes Australian Businesses will be able to directly control their own DCL records. It does not have a restrict access to a group of Accredited Access Points
 
-This simplified Web User Interface (Web UI) has been specified to support integration testing, and possibly as a "minimum viable product" for the self-service user-story.  It is not meant to imply that a DCL Management API in unessiscary, and the Simplified Web UI may be become redundant once a satisfactory Management API Specification has been agreed to.
+This simplified Web User Interface (Web UI) has been specified to support integration testing, and possibly as a "minimum viable product" for the self-service user-story.  It is not meant to imply that a DCL Management API is unnecessary, and the Simplified Web UI may be become redundant once a satisfactory Management API Specification has been agreed to.
 
 The following Simplified Web UI SPEC is proposed as an interim measure
 ```
