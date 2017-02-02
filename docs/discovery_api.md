@@ -29,7 +29,7 @@ Unresolved canonical input formatting issues:
 
 ## URN Encoding
 
-The ADBC document specifies an URN-encoded business identifier, using the NID prefix and ISO 6523 identifer type schemes.
+The ADBC document specifies an URN-encoded business identifier, using the NID prefix and ISO 6523 identifier type schemes.
 
 ```
 Feature: URN encoded Identifiers
@@ -46,7 +46,7 @@ Scenario Outline: urn encoded ABN 33767197359 (LOWER CASE urn)
 
 Unresolved issues:
 
- * The document explains how NID URNs can encode various business identifier echemes, but is not explicit about which schemes are required. Do we need to support non-ABN identifiers?
+ * The document explains how NID URNs can encode various business identifier schemes, but is not explicit about which schemes are required. Do we need to support non-ABN identifiers?
 
 
 ## MD5 Hexdigest of URN encoded business identifier
