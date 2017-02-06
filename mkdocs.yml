@@ -1,7 +1,1 @@
 site_name: Digital Capability Locator SPEC
-repo_url: https://github.com/ausdigital/ausdigital-dcl
-pages:
-    - 'Introduction': 'index.md'
-    - 'Discovery API': 'discovery_api.md'
-    - 'Management API': 'management_api.md'
-    - 'Normative examples': 'normative_examples.md'
