@@ -5,7 +5,11 @@ The framework assumes that there could be multiple publishers of business meta-d
  * [Version 1.0](/docs/1.0/index.md)
 
 Specification: [https://ausdigital-dcl.readthedocs.io/](https://ausdigital-dcl.readthedocs.io/)
+
 Community discussion/support: [ausdigital.org](http://ausdigital.org)
+
 Open source reference implementation: [https://github.com/test-point/testpoint-dcl/](https://github.com/test-point/testpoint-dcl)
+
 Test suite: [https://github.com/test-point/testpoint-dcl](https://github.com/test-point/testpoint-dcl)
+
 Live test endpoint: [https://dcl.testpoint.io/](https://dcl.testpoint.io/)
