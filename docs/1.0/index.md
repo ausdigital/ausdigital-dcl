@@ -1,14 +1,47 @@
- * Spec ID: ausdigital.org/dcl/1.0
+ * Spec ID: ausdigital.org/ausdigital-dcl/1.0
  * ![raw](http://rfc.unprotocols.org/spec:2/COSS/raw.svg)
- * Editor: Chris Gough christopher.d.gough@gmail.com
- * Contributors: Steven Capell steven.capell@gosource.com.au
+ * Editor: [Chris Gough](mailto:christopher.d.gough@gmail.com)
+ * Contributors: [Steven Capell](mailto:steven.capell@gosource.com.au)
+
+# AusDigital Digital Capability Locator (DCL) 1.0 Specification
+
+## Introduction
 
 This document describes a method for discovering where (which Service Metadata Provider, SMP) a Business publishes information about how to interface their business systems, for the purpose of digital protocols such as electronic invoicing.
 The framework assumes that there could be multiple SMP in the network, and so the Digital Capability Locator (DCL) is essentially a Domain Name System (DNS) entry that is used to redirect a lookup query for a given business identifier to the correct SMP.
 
+## Goals
+
+The primary goal of the Digital Capability Locator (DCL) 1.0 Specification is to facilitate integration between Australian businesses, for the purpose of exchanging formal electronic messages (such as digital invoices).
+
+The Digital Capability Locator (DCL) 1.0 Specification defines the interfaces and protocols a central address book, published through the internet Domain Name System, that allows anyone to discover the location of authoratitive metadata describing the integration surface of an Australian business.
+
+
+## Status
+
+This spec is an early draft for consuiltation.
+
+This specification aims to support the Australian Digital Business Council
+[eInvoicing initiative](http://ausdigital.org), and is under active
+development at
+[https://github.com/ausdigital/ausdigital-dcl](https://github.com/ausdigital/ausdigital-dcl).
+
+Comments and feedback are encouraged and welcome. Pull requests with improvements are welcome too.
+
+## Glossary
+
+Phrase | Definition
+------------ | -------------
+ausdigital-dcl/1 | This specification.
+ausdigital-nry/1 | Version 1 of the AusDigtial [Notary (NRY)](https://ausdigital-nry.readthedocs.io) specification
+ausdigital-dcp/1 | Version 1 of the AusDigtial [Digital Capability Provider (DCP)](https://ausdigital-dcp.readthedocs.io) specification
+ausdigital-idp/1 | Version 1 of the AusDigital [Identity Provider (IDP)](https://ausdigital-idp.readthedocs.io) specification.
+ausdigital-tap/1 | Version 1 of the AusDigital [Transaction Access Point(TAP)](http://ausdigital.org/transaction-access-point) specification.
+
+
 # Discovery API
 
-Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies DNS NAPTR records as a DCL query API.
+Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/1.0/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies DNS NAPTR records as a DCL query API.
 
 This requires client to create an appropriately formed query, which is then sent through the DNS system where it is matched with a NAPTR record (maintained by the DCL service)
 
@@ -37,7 +70,7 @@ Unresolved canonical input formatting issues:
 
 ## URN Encoding
 
-The ADBC document specifies an URN-encoded business identifier, using the NID prefix and ISO 6523 identifer type schemes.
+The ADBC document specifies an URN-encoded business identifier, using the NID prefix and ISO 6523 identifier type schemes.
 
 ```
 Feature: URN encoded Identifiers
@@ -54,7 +87,7 @@ Scenario Outline: urn encoded ABN 33767197359 (LOWER CASE urn)
 
 Unresolved issues:
 
- * The document explains how NID URNs can encode various business identifier echemes, but is not explicit about which schemes are required. Do we need to support non-ABN identifiers?
+ * The document explains how NID URNs can encode various business identifier schemes, but is not explicit about which schemes are required. Do we need to support non-ABN identifiers?
 
 
 ## MD5 Hexdigest of URN encoded business identifier
@@ -135,14 +168,16 @@ So that I can configure the DCL on their behalf
 
 The current AusDigital specification is in a raw status (not yet draft). Please contribute to the discussion at the [DCL issue system](https://github.com/ausdigital/ausdigital-dcl/issues/).
 
+
 ## ADBC Proposal
 
-Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies the Management API "used to register a relationship between a Participant
+Section 8 of the ADBC DCL Implementation Guide (v1.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/1.0/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies the Management API "used to register a relationship between a Participant
 Identifier and a Digital Capability Publisher".
 
 This specifies HTTPS interfaces with client certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.
 
 It also specifies a "List Accredited Publishers" and "List Accredited Access Points" interface. The document suggests the ADBC would be responsible for accreditation. More work is required to resolve this process, and evaluate if these kinds of accreditation process are necessary or even desirable.
+
 
 ## Simplified Web UI
 
@@ -156,11 +191,11 @@ Then I am able to update my DCP entry
 ```
 
 The current DCL reference implementation:
- * Uses an OIDC Identity Provider as a simulation of a trusted business identity provider that is loosely decoupled from the DCL and enables concent-based authorisation.
+ * Uses an OIDC Identity Provider as a simulation of a trusted business identity provider that is loosely decoupled from the DCL and enables consent-based authorisation.
  * Assumes Australian Businesses (or providers acting on their behalf) will be able to nominate arbitrary DCPs, rather than assuming a authorised or certified list of DCPs.
  * Assumes Australian Businesses will be able to directly control their own DCL records. It does not have a restrict access to a group of Accredited Access Points
 
-This simplified Web User Interface (Web UI) has been specified to support integration testing, and possibly as a "minimum viable product" for the self-service user-story.  It is not meant to imply that a DCL Management API in unessiscary, and the Simplified Web UI may be become redundant once a satisfactory Management API Specification has been agreed to.
+This simplified Web User Interface (Web UI) has been specified to support integration testing, and possibly as a "minimum viable product" for the self-service user-story.  It is not meant to imply that a DCL Management API is unnecessary, and the Simplified Web UI may be become redundant once a satisfactory Management API Specification has been agreed to.
 
 The following Simplified Web UI SPEC is proposed as an interim measure
 ```
@@ -229,38 +264,10 @@ TODO: howo to perform a DCL query
 
 TODO: how to perform a DCL update
 
-## License
-
-Copyright (c) 2016 the Editor and Contributors.
-
-This Specification is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.
-
-This Specification is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, see http://www.gnu.org/licenses.
-
-
-## Change Process
-
-This document is governed by the 2/COSS (COSS), published at https://rfc.unprotocols.org/spec:2/COSS/
-
-
-## Language
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119
-
-
-## Goals
-
-The primary goal of the Digital Capability Locator SPEC (DCL-SPEC) is to facilitate integration between Australian businesses, for the purpose of exchanging formal electronic messages (such as digital invoices).
-
-The DCL-SPEC defines the interfaces and protocols a central address book, published through the internet Domain Name System, that allows anyone to discover the location of authoratitive metadata describing the integration surface of an Australian business.
-
-
 # Related Material
 
- * ADBC DCL Implementation Guide (v1.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)), which provides background to the [AusDigital](http://ausdigital.org) community process.
- * [GitHub issues](https://github.com/ausdigital/ausdigital-dcl/issues/) for collaborating on the development of the DCL-SPEC
- * A reference [DCL service](https://dcl.testpoint.io/) (for testing and development purposes)
- * Free, Open-Source Software [DCL implementation](https://github.com/test-point/dcl.testpoint.io/).
+ * ADBC DCL Implementation Guide (v1.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/1.0/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)), which provides background to the [AusDigital](http://ausdigital.org) community process.
+ * [GitHub issues](https://github.com/ausdigital/ausdigital-dcl/issues/) for collaborating on the development of the DCL.
+ * A reference [DCL service](https://dcl.testpoint.io/) (for testing and development purposes).
+ * Free, Open-Source Software [DCL implementation](https://github.com/test-point/testpoint-dcl).
  * An automated [DCL test suite](https://github.com/test-point/testpoint-dcl).

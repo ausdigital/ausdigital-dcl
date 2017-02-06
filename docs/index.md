@@ -1,2 +1,3 @@
-# Digital Capability Locator Specification
- * [Version 1.0](/docs/1.0/index.md)
+# AusDigital Digital Capability Locator (DCL) Specification
+
+ * [Version 1.0](/1.0)
