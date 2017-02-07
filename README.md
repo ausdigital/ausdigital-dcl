@@ -4,7 +4,7 @@ The framework assumes that there could be multiple publishers of business meta-d
 
  * [Version 1.0](/docs/1.0/index.md)
 
-Specification: [https://ausdigital-dcl.readthedocs.io/](https://ausdigital-dcl.readthedocs.io/)
+Specification: [http://ausdigital.org/specs/ausdigital-dcl/1.0/](http://ausdigital.org/specs/ausdigital-dcl/1.0/)
 
 Community discussion/support: [ausdigital.org](http://ausdigital.org)
 
