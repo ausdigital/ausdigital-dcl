@@ -42,7 +42,7 @@ ausdigital-tap/1 | Version 1 of the AusDigital [Transaction Access Point(TAP)](h
 
 # Discovery API
 
-Section 7 of the ADBC DCL Implementation Guide (v2.0.0 available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/2.0.0/)) specifies DNS NAPTR records as a DCL query API.
+Section 7 of the ADBC DCL Implementation Guide (v2.0.0 available [here](http://ausdigital.org/specs/ausdigital-dcl/2.0.0/Digital_Capability_Locator_Implementation_Guide_v2.0.0.pdf)) specifies DNS NAPTR records as a DCL query API.
 
 This requires client to create an appropriately formed query, which is then sent through the DNS system where it is matched with a NAPTR record (maintained by the DCL service)
 
@@ -172,7 +172,7 @@ The current AusDigital specification is in a raw status (not yet draft). Please 
 
 ## ADBC Proposal
 
-Section 8 of the ADBC DCL Implementation Guide (v2.0.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/2.0.0)) specifies the Management API "used to register a relationship between a Participant
+Section 8 of the ADBC DCL Implementation Guide (v2.0.0, available [here](http://ausdigital.org/specs/ausdigital-dcl/2.0.0/Digital_Capability_Locator_Implementation_Guide_v2.0.0.pdf)) specifies the Management API "used to register a relationship between a Participant
 Identifier and a Digital Capability Publisher".
 
 This specifies HTTPS interfaces with client certificate authentication and json or XML payloads. The CREATE and DELETE interfaces are mandatory, and the UPDATE interface is optional. More work is required to resolve how these client certificates might be issued and managed. In it's current form, there appear to be practical limits on supportability of the Self Service user-story.
@@ -267,7 +267,7 @@ TODO: how to perform a DCL update
 
 # Related Material
 
- * ADBC DCL Implementation Guide (v2.0.0, available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/2.0.0/)), which provides background to the [AusDigital](http://ausdigital.org) community process.
+ * ADBC DCL Implementation Guide (v2.0.0, available [here](http://ausdigital.org/specs/ausdigital-dcl/2.0.0/Digital_Capability_Locator_Implementation_Guide_v2.0.0.pdf)), which provides background to the [AusDigital](http://ausdigital.org) community process.
  * [GitHub issues](https://github.com/ausdigital/ausdigital-dcl/issues/) for collaborating on the development of the DCL.
  * A reference [DCL service](https://dcl.testpoint.io/) (for testing and development purposes).
  * Free, Open-Source Software [DCL implementation](https://github.com/test-point/testpoint-dcl).
