@@ -277,7 +277,7 @@ Scenario: Save changes to the DCP
 
 ## Management
 
-    curl -XPOST "https://dbc-dcl.testpoint.io/api/ausdigital/v0" \
+    curl -XPOST "https://dcl.testpoint.io/api/ausdigital/v0" \
     -H "Content-type: application/json" \
     -H "Authorization: JWT XXXXX.YYYYYYYYYYYYYYYYYYYYYYY.ZZZZZZ" \
     -d '{"participantIdentifier": "51824753556", "participantIdentifierScheme": "urn:oasis:names:tx:ebcore:partyid-type:iso6523:0151", "capabilityPublisherUrl": "dcp.testpoint.io"}'
