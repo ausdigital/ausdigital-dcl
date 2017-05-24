@@ -8,8 +8,10 @@ contributors:
 
 ## Introduction
 
-This document describes a method for discovering where (which Service Metadata Provider, SMP) a Business publishes information about how to interface their business systems, for the purpose of digital protocols such as electronic invoicing.
-The framework assumes that there could be multiple SMP in the network, and so the Digital Capability Locator (DCL) is essentially a Domain Name System (DNS) entry that is used to redirect a lookup query for a given business identifier to the correct SMP.
+This document describes a method for discovering where (which Digital Capability Publisher, DCP) a Business publishes information about how to interface their business systems, 
+for the purpose of digital protocols such as electronic invoicing.
+The framework assumes that there could be multiple SMP in the network, and so the Digital Capability Locator (DCL) is essentially a Domain Name System (DNS) entry that is used to redirect 
+a lookup query for a given business identifier to the correct SMP.
 
 ## Goals
 
@@ -42,7 +44,7 @@ ausdigital-tap/1 | Version 1 of the AusDigital [Transaction Access Point(TAP)](h
 
 # Discovery API
 
-Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/1.0/Digital_Capability_Locator_Implementation_Guide_v1.0.pdf)) specifies DNS NAPTR records as a DCL query API.
+Section 7 of the ADBC DCL Implementation Guide (v1.0 available [here](https://github.com/ausdigital/ausdigital-dcl/blob/master/docs/1.0/Attachment_5a_DCL-BusinessRequirements-v0.1.7.pdf)) specifies DNS NAPTR records as a DCL query API.
 
 This requires client to create an appropriately formed query, which is then sent through the DNS system where it is matched with a NAPTR record (maintained by the DCL service)
 
