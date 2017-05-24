@@ -259,11 +259,28 @@ Scenario: Save changes to the DCP
 
 ## Discovery
 
-TODO: howo to perform a DCL query
+    $ host -t naptr b-ce25697344efbe06c2ec27bcdd660a37.dbc-dcl.testpoint.io. 8.8.8.8
+    Using domain server:
+    Name: 8.8.8.8
+    Address: 8.8.8.8#53
+    Aliases:
+
+    b-ce25697344efbe06c2ec27bcdd660a37.dbc-dcl.testpoint.io has NAPTR record 10 100 "s" "" "" my-amazing-dcp.org.
+
+    $ host -t naptr b-xxxxx.dbc-dcl.testpoint.io. 8.8.8.8
+    Using domain server:
+    Name: 8.8.8.8
+    Address: 8.8.8.8#53
+    Aliases:
+
+    Host b-xxxxx.dbc-dcl.testpoint.io. not found: 3(NXDOMAIN)
 
 ## Management
 
-TODO: how to perform a DCL update
+    curl -XPOST "https://dbc-dcl.testpoint.io/api/ausdigital/v0" \
+    -H "Content-type: application/json" \
+    -H "Authorization: JWT XXXXX.YYYYYYYYYYYYYYYYYYYYYYY.ZZZZZZ" \
+    -d '{"participantIdentifier": "51824753556", "participantIdentifierScheme": "urn:oasis:names:tx:ebcore:partyid-type:iso6523:0151", "capabilityPublisherUrl": "dcp.testpoint.io"}'
 
 # Related Material
 
