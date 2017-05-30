@@ -3,6 +3,4 @@ layout: swagger
 data: ausdigital-dcl_1-0_swagger
 ---
 
-Click [here](agilo.html){:target="_blank"} to see this specification in Agilo format with complete set of examples/models.
-
-Click [here](swagger.json){:target="_blank"} to download the original swagger document.
+Click [here](http://swagger.testpoint.io?url=http://ausdigital.org/specs/ausdigital-dcl/1.0/swagger.json){:target="_blank"} for Swagger UI with a complete set of examples and data models.
